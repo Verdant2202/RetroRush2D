@@ -94,6 +94,81 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
+            <key>pixil-frame-0 (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{16,16}</string>
+                <key>spriteSourceSize</key>
+                <string>{16,16}</string>
+                <key>textureRect</key>
+                <string>{{144,0},{16,16}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>pixil-frame-0 (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{16,16}</string>
+                <key>spriteSourceSize</key>
+                <string>{16,16}</string>
+                <key>textureRect</key>
+                <string>{{160,0},{16,16}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>pixil-frame-0 (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{16,16}</string>
+                <key>spriteSourceSize</key>
+                <string>{16,16}</string>
+                <key>textureRect</key>
+                <string>{{176,0},{16,16}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>pixil-frame-0 (19).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{16,16}</string>
+                <key>spriteSourceSize</key>
+                <string>{16,16}</string>
+                <key>textureRect</key>
+                <string>{{192,0},{16,16}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>pixil-frame-0 (20).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{16,16}</string>
+                <key>spriteSourceSize</key>
+                <string>{16,16}</string>
+                <key>textureRect</key>
+                <string>{{208,0},{16,16}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
             <key>pixil-frame-0 (7).png</key>
             <dict>
                 <key>aliases</key>
@@ -151,9 +226,9 @@
             <key>realTextureFileName</key>
             <string>PlayerVisual.png</string>
             <key>size</key>
-            <string>{144,16}</string>
+            <string>{224,16}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e2d196dd80e1ddab674293f1d7c818ca:4fa5728435a32ff2f1ad105c9cdbbb40:e17999d9a93690c5de50995888c7e2ee$</string>
+            <string>$TexturePacker:SmartUpdate:c65dbb649bf698a22e791d75a8f80aa0:5e46f791e254620341a765615d9d1cbf:e17999d9a93690c5de50995888c7e2ee$</string>
             <key>textureFileName</key>
             <string>PlayerVisual.png</string>
         </dict>

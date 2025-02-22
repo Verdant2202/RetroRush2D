@@ -2603,3 +2603,4 @@ MonoBehaviour:
     m_Bits: 8
   playerVisual: {fileID: 0}
   jumpTime: 0.8
+  coyoteTime: 0.15

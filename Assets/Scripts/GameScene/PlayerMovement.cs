@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float jumpTime = 2f;
     private float timeAtUnjump = 0f;
+    private bool jumpBuffered = false;
+    private bool wasGrounded = false;
+    [SerializeField] private float coyoteTime;
+    private float coyoteTimeTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +43,37 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (!wasGrounded && IsGrounded())
+        {
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0f);
+        }
+        wasGrounded = IsGrounded();
+
+        if (IsGrounded())
+        {
+            coyoteTimeTimer = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeTimer -= Time.deltaTime;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpBuffered = true;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            jumpBuffered = false;
+        }
+
+        if (jumpBuffered && coyoteTimeTimer > 0f)
         {
             isJumping = true;
             timeAtUnjump = Time.time + jumpTime;
             rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpBuffered = false;
+            coyoteTimeTimer = 0f;
         }
         if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {

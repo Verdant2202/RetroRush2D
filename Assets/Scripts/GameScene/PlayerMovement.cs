@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Vector2 moveForce;
     private Vector2 gravityForce;
+    [Header("General Variables")]
+    [SerializeField] private Vector3 startPosition;
     [Header("General Movement Variables")]
     [SerializeField] private float gravity;
     [SerializeField] private Rigidbody2D rigidbody;
@@ -13,16 +15,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerSpeedRunning;
     [SerializeField] private float jumpForce = 6f;
     private float currentPlayerSpeed;
+
     [Header("Ground Variables")]
     [SerializeField] private BoxCollider2D groundCheckCollider;
     [SerializeField] private LayerMask groundLayerMask;
 
 
-    [SerializeField] PlayerVisual playerVisual;
     private bool isWalking = false;
     private bool isRunning = false;
     private bool isJumping = false;
 
+    [Header("Jump variables")]
     [SerializeField] private float jumpTime = 2f;
     private float timeAtUnjump = 0f;
     private bool jumpBuffered = false;
@@ -150,6 +153,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 GetMoveDirection()
     {
         return moveForce;
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = startPosition;
     }
 
 }

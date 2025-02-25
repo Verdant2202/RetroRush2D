@@ -1084,6 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentLevel: 0
+  unlockedLevels: 01000000
 --- !u!1 &1726850831
 GameObject:
   m_ObjectHideFlags: 0

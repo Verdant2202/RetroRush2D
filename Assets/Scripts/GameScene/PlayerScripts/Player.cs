@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     {
         playerVisual.RunWinAnimation();
         await Task.Delay(1000);
-        GameManager.Instance.UnlockNextLevel();
+        GameManager.Instance.BeatCurrentLevel();
         GameManager.Instance.QuitLevel();
     }
     // Start is called before the first frame update

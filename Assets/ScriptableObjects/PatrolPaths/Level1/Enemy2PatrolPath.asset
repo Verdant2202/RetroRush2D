@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7717ff11e782db44bacac7f7893aab82, type: 3}
-  m_Name: Crabs2
+  m_Name: Enemy2PatrolPath
   m_EditorClassIdentifier: 
   pathPoints:
-  - {x: 16.5, y: 5.5, z: 0}
-  - {x: 22.5, y: 5.5, z: 0}
+  - {x: 71, y: -3.5}
+  - {x: 79, y: -3.5}
+  - {x: 87, y: -3.5}

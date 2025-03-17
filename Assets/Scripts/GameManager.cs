@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public int CurrentLevel;
     public static GameManager Instance;
     public List<int> unlockedLevels;
-
+    public List<int> beatenLevels;
     private void Awake()
     {
         if(Instance == null)
@@ -44,8 +44,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UnlockNextLevel()
+    public bool IsLevelBeaten(int level)
     {
+        if(beatenLevels.Contains(level))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void BeatLevel(int level)
+    {
+        if(IsLevelBeaten(level))
+        {
+            return;
+        }
+        beatenLevels.Add(level);
+    }
+
+    public void BeatCurrentLevel()
+    {
+        BeatLevel(CurrentLevel);
         UnlockLevel(CurrentLevel + 1);
     }
 

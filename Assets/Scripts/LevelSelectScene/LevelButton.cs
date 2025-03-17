@@ -25,8 +25,22 @@ public class LevelButton : MonoBehaviour
         {
             SetButtonVisual(false);
         }
+
+        SetTextVisual(GameManager.Instance.IsLevelBeaten(levelSO.ID));
+        
     }
 
+    private void SetTextVisual(bool beaten)
+    {
+        if (beaten)
+        {
+            levelNameText.color = Color.yellow;
+        }
+        else
+        {
+            levelNameText.color = Color.white;
+        }
+    }
     private void SetButtonVisual(bool enable)
     {
         if(enable)

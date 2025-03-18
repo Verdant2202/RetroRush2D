@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("General Variables")]
     [SerializeField] private Vector3 startPosition;
     [Header("General Movement Variables")]
+    [SerializeField] private float jumpGravity;
     [SerializeField] private float gravity;
     [SerializeField] private Rigidbody2D rigidbody;
     [SerializeField] private float playerSpeed;
@@ -32,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     private bool wasGrounded = false;
     [SerializeField] private float coyoteTime;
     private float coyoteTimeTimer;
+    [SerializeField] private float timeToNormalGravity = 1f;
+    float lastJumped = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        lastJumped += Time.deltaTime;
         if(Time.time >= timeAtUnjump)
         {
             isJumping = false;
@@ -74,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
             timeAtUnjump = Time.time + jumpTime;
+            lastJumped = 0f;
             rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpBuffered = false;
             coyoteTimeTimer = 0f;
@@ -102,8 +107,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         moveForce = Vector2.zero;
-        gravityForce = Vector2.down * gravity;
-
+        if (lastJumped <= timeToNormalGravity)
+        {
+            gravityForce = Vector2.down * jumpGravity;
+        }
+        else
+        {
+            gravityForce = Vector2.down * gravity;
+        }
         if (Input.GetKey(KeyCode.A))
         {
             moveForce += Vector2.left * currentPlayerSpeed;

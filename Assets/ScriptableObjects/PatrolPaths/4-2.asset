@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da1b595cd0be3c7449b3770582794775, type: 3}
-  m_Name: Level12
+  m_Script: {fileID: 11500000, guid: 7717ff11e782db44bacac7f7893aab82, type: 3}
+  m_Name: 4-2
   m_EditorClassIdentifier: 
-  _id: 12
-  _name: 1-12
-  _levelScenePrefab: {fileID: 6664509570300021031, guid: af9c5a0c6e1e0434fab0c577d5ab7e36, type: 3}
+  pathPoints:
+  - {x: 20.5, y: 2.5}
+  - {x: 24.5, y: 2.5}

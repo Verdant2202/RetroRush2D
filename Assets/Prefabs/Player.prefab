@@ -339,17 +339,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 1.65, z: 0}
-  gravity: 10
+  jumpGravity: 10
+  gravity: 18
   rigidbody: {fileID: 117386126013520991}
   playerSpeed: 5
   playerSpeedRunning: 7.5
-  jumpForce: 7.5
+  jumpForce: 9
   groundCheckCollider: {fileID: 117386126792650491}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 8
   jumpTime: 0.8
   coyoteTime: 0.13
+  timeToNormalGravity: 0.7
 --- !u!114 &6961790740870498704
 MonoBehaviour:
   m_ObjectHideFlags: 0
